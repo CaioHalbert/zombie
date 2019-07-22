@@ -1,4 +1,4 @@
-enable =false;
+enable = true;
 i=0;
 
 hp = 40; //Contabiliza a vida do Player

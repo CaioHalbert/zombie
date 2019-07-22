@@ -20,6 +20,7 @@ shoot=0;
 		i+=1;
 		if(i>=10)
 		{
+			with(other) instance_destroy();
 			enable= true;
 			
 			i=0;
