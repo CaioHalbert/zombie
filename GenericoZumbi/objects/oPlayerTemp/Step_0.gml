@@ -1,4 +1,5 @@
-// variavel do botão que sai do 
+
+// variavel do botão que sai do ataque inimigo
 hurt = keyboard_check_pressed(ord("R"));
  
 if(enable == true)
@@ -7,18 +8,26 @@ if(enable == true)
 Control();
 
 }
+
+/**************************************/
+
 else
+// Condição de agarrar do zumbi
 {
 up =0;
 down =0;
 right=0;
 left=0;
 shoot=0;
+
+timer += 1;
+hp -= 0.025;
+ifx += 0.05
 	
 	if(hurt)
 	{
 		i+=1;
-		if(i>=10)
+		if(i>=10 && timer>= 20)
 		{
 			
 			enable= true;
@@ -28,9 +37,29 @@ shoot=0;
 	}
 }
 	
-		
+/***********************************/	
 	
+// condição para progresso de infecção
+if(ifx>0)
+{
+	ifx += 0.01;
+}
+if(ifx > 20)
+{
+	hp -= 0.002;
+}
+if(ifx > 50)
+{
+	hp -= 0.004
+	wSpeed = 3;
+}
+if(ifx > 80)
+{
+	hp -= 0.008;
+	wSpeed = 2;
+}
 	
+/******************************************/	
 
 // movimentação
 // calculo para ver se tem movimento pra direita ou esquerda
@@ -38,12 +67,12 @@ var movH = right - left;
 // calculo para ver se tem movimento pra direita ou esquerda
 var movV = down - up; 
 
-
 // mover direta ou esquerda
 spdHorizontal = movH * wSpeed;
 
 // mover direta ou esquerda
 spdVertical = movV * wSpeed;
+
 
 // colisao com parede --------------------------------------------
 
@@ -74,6 +103,7 @@ if (place_meeting(x+spdHorizontal,y,oWall))
 // movimento
 y = y+spdVertical;
 x = x+spdHorizontal;
+
 
 //animaçoes ---------------------------------------------------------------------
 

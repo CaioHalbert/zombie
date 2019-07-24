@@ -1,8 +1,9 @@
 enable = true;
 i=0;
+timer = 0;
 
-hp = 40; //Contabiliza a vida do Player
-ifx = 60;  //Contabiliza o nivel de infecção
+hp = 100; //Contabiliza a vida do Player
+ifx = 0;  //Contabiliza o nivel de infecção
 
 sprite_index = sprPlayerIdleTemp;
 wSpeed =  4;
