@@ -3,8 +3,12 @@
 
 // armazenar objetos na zona de colisao
 var _detector = collision_circle_list(x,y,RaioVisao,oActors,false,true,ListaAlvos,true);
+
+
 // achar o mais perto
 var _closest = ListaAlvos[|0];
+
+
 // ajusta ponto alvo caso tenha algum alvo
 if( ds_list_empty(ListaAlvos) == false )
 {
@@ -14,7 +18,7 @@ if( ds_list_empty(ListaAlvos) == false )
 	if(_closest.id == oPlayerTemp.id)
 	{
 		image_angle =  point_direction(x,y,_closest.x, _closest.y);
-		mp_potential_step_object(_closest.x,_closest.y,speedZumbi,oWall);
+		//mp_potential_step_object(_closest.x,_closest.y,speedZumbi,oWall);
 	}
 }
 
@@ -22,7 +26,7 @@ if( ds_list_empty(ListaAlvos) == false )
 // limpar lista
 ds_list_clear(ListaAlvos);
 
-/*
+
 var inst = instance_nearest(x, y, oPlayerTemp);
 if instance_exists(inst)
 {
@@ -45,4 +49,16 @@ if(can_see)
 	mp_potential_step_object(inst.x,inst.y,speedZumbi,oWall);
 	image_angle =  point_direction(x,y,inst.x,inst.y);
 }
-*/
+
+// logica de morte -------------------------------------------
+
+if (hpZumbi <= 0)
+{
+	timer += 1;
+	if(timer >= 20)
+	{
+		timer = 0;
+		instance_destroy();
+		
+	}
+}

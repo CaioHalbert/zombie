@@ -1,5 +1,6 @@
- speedZumbi = 1;
+speedZumbi = 1;
 hpZumbi = 100;
+timer = 0;
 
 
 RaioVisao = 200;

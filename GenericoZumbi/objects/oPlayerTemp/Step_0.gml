@@ -40,24 +40,28 @@ ifx += 0.05
 /***********************************/	
 	
 // condição para progresso de infecção
-if(ifx>0)
+if(ifx>0 && ifx<=20)
 {
 	ifx += 0.01;
 }
-if(ifx > 20)
+else if(ifx>20 && ifx<=50)
 {
+	ifx += 0.02;
 	hp -= 0.002;
 }
-if(ifx > 50)
+else if(ifx>50 && ifx<=80)
 {
+	ifx += 0.04;
 	hp -= 0.004
 	wSpeed = 3;
 }
-if(ifx > 80)
+else if(ifx>80)
 {
+	ifx += 0.08;
 	hp -= 0.008;
 	wSpeed = 2;
 }
+
 	
 /******************************************/	
 
