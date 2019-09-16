@@ -2,6 +2,9 @@ enable = true;
 i=0;
 timer = 0;
 
+Tstatus = "Fine";
+Tname = "Caio";
+
 hp = 100; //Contabiliza a vida do Player
 ifx = 0;  //Contabiliza o nivel de infecção
 

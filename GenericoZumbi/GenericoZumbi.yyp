@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "2deaebd2-8014-4089-89f2-56909bd695ba",
+            "Value": {
+                "id": "7899bceb-1064-4d40-abb6-c572b572e10d",
+                "resourcePath": "objects\\TxHUD\\TxHUD.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2eb94a63-b51d-4945-bb3c-e19968f4c912",
             "Value": {
                 "id": "733c3bf6-b0a1-4f95-8918-4fe4763d9c2f",
@@ -148,6 +156,14 @@
                 "id": "299cbee0-141d-46b0-a08b-0dcd7eaa0522",
                 "resourcePath": "options\\html5\\options_html5.yy",
                 "resourceType": "GMHtml5Options"
+            }
+        },
+        {
+            "Key": "77d8b90f-5917-402e-b89c-f9545343d8f6",
+            "Value": {
+                "id": "651db717-0739-4db5-b22a-28f66e314da9",
+                "resourcePath": "sprites\\HealthInfectBar\\HealthInfectBar.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
