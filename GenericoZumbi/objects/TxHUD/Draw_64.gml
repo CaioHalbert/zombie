@@ -1,4 +1,7 @@
 /// @description Textos na tela
 
-draw_text_color(45, 72,oPlayerTemp.Tstatus, c_green, c_green, c_green, c_green, true);
-draw_text_color(95, 72,oPlayerTemp.Tname, c_green, c_green, c_green, c_green, true);
+draw_set_color(c_black);
+draw_set_font(text8bit);
+
+draw_text(50, 72,oPlayerTemp.Tname);
+draw_text(200, 72,oPlayerTemp.Tstatus);
