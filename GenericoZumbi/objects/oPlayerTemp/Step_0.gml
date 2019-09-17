@@ -43,23 +43,27 @@ ifx += 0.05
 if(ifx>0 && ifx<=20)
 {
 	ifx += 0.01;
+	Tstatus = "Infected";
 }
 else if(ifx>20 && ifx<=50)
 {
 	ifx += 0.02;
 	hp -= 0.002;
+	Tstatus = "Caution";
 }
 else if(ifx>50 && ifx<=80)
 {
 	ifx += 0.04;
 	hp -= 0.004
 	wSpeed = 3;
+	Tstatus = "Danger";
 }
 else if(ifx>80)
 {
 	ifx += 0.08;
 	hp -= 0.008;
 	wSpeed = 2;
+	Tstatus = "Hurry";
 }
 
 	
