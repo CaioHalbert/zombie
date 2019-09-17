@@ -127,21 +127,43 @@ else
 
 // direção
 
-if(up)
+if(TurnLeft)
 {
-	image_angle = 90;
+	if(image_angle == 0)
+	{
+		image_angle = 90;
+	}
+	else if(image_angle == 90)
+	{
+		image_angle = 180;
+	}
+	else if(image_angle == 180)
+	{
+		image_angle = -90;
+	}
+	else if(image_angle == -90)
+	{
+		image_angle = 0;
+	}
 }
-else if(down)
+else if(TurnRight)
 {
-	image_angle = -90;
-}
-else if(left)
-{
-	image_angle = 180;
-}
-else if(right)
-{
-	image_angle = 0;
+	if(image_angle == 0)
+	{
+		image_angle = -90;
+	}
+	else if(image_angle == -90)
+	{
+		image_angle = 180;
+	}
+	else if(image_angle == 180)
+	{
+		image_angle = 90;
+	}
+	else if(image_angle == 90)
+	{
+		image_angle = 0;
+	}
 }
 
 // -------------------------------------------------------------------------------

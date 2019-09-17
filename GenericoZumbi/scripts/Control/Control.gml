@@ -1,6 +1,10 @@
 if(hascontrol)
 {
 	// teclado
+	
+	TurnRight = keyboard_check_pressed(ord("E"));
+	TurnLeft = keyboard_check_pressed(ord("Q"));
+	
 	left= keyboard_check(ord("A"));
 	right= keyboard_check(ord("D"));
 	up= keyboard_check(ord("W"));
@@ -15,6 +19,8 @@ if(hascontrol)
 
 	if(abs(gamepad_axis_value(0,gp_axislh)) > 0.2 )
 	{
+		TurnRight = gamepad_button_check_pressed(0, gp_shoulderr);
+		TurnLeft = gamepad_button_check_pressed(0, gp_shoulderl);
 		left = abs(min(gamepad_axis_value(0,gp_axislh),0));
 		right = max(gamepad_axis_value(0,gp_axislh),0);
 		up = abs(min(gamepad_axis_value(0,gp_axislv),0));
