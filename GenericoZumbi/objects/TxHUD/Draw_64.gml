@@ -1,5 +1,11 @@
 /// @description Textos na tela
 
+if(keyboard_check(vk_lshift))
+{
+	draw_sprite(sprInventario, true, 14, 300);
+}
+
+
 draw_set_color(c_black);
 draw_set_font(text8bit);
 
